@@ -1,115 +1,232 @@
 body {
+    background-color: #B4C5E4; /* Light background for the entire page */
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f2f2f2; 
+    margin: 0;
+    padding: 0;
 }
-/* Container for centering content */
+
 .container {
-    max-width: 800px; 
-    margin: 0 auto; 
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #A8DAB5; /* Light green background for the form container */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-/* Grid layout for player cards */
-.player-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
-    gap: 20px; /* Space between cards *?
+
+header h1 {
+    color: #3066BE; /* Main theme color */
+    text-align: center;
 }
-/* Styles for each player card */
-.player {
-    display: flex;
-    flex-direction: column; 
-    margin-bottom: 20px; 
-    background-color: white; 
-    padding: 10px; 
-    border-radius: 8px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+
+header p {
+    color: #3C3744; /* Darker text color */
+    text-align: center;
 }
-/* Image styles */
-.player img {
-    width: 100px; 
-    height: auto; 
-    border-radius: 8px; 
-    margin-right: 20px; 
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #3C3744; /* Darker text color */
 }
-/* Player information section styles */
-.player-info {
-    flex: 1; 
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #3066BE; /* Match the theme color */
+    border-radius: 5px;
+    background-color: #FFFFFF; /* White background for inputs */
 }
-/* Heading styles */
-.player-info h2 {
-    margin: 0; 
-    font-size: 1.5em; 
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #090C9B; /* Dark blue when focused */
+    outline: none; /* Remove outline */
 }
-/* Paragraph styles for player details */
-.player-info p {
-    margin: 5px 0; 
-}
-/* Hover effect for player cards */
-.player:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
-}
-/* Button styles */
-.hide-button, .feedback-btn, .share-btn {
-    padding: 5px 10px;
-    background-color: #4CAF50; 
-    color: white; 
+
+.submit-btn {
+    background-color: #3066BE; /* Match the main theme color */
+    color: #FFFFFF; /* White text */
+    padding: 10px 15px;
     border: none;
-    border-radius: 5px; 
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
 }
-/* Button hover effect */
-.hide-button:hover, .feedback-btn:hover, .share-btn:hover {
-    background-color: #45a049; 
+
+.submit-btn:hover {
+    background-color: #090C9B; /* Dark blue on hover */
 }
-/* Styles for like and dislike buttons */
+
+.back-btn {
+    background-color: #B4C5E4; /* Light background */
+    color: #3C3744; /* Darker text */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #3C3744; /* Dark background on hover */
+    color: #B4C5E4; /* Light text on hover */
+}
+
+
+/* Soccer Theme Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #D9E9D4; /* Light green background, resembling a soccer field */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2B8C2A; /* Dark green for headings */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.player-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.player {
+    background-color: #FFFFFF; /* White cards */
+    border: 2px solid #2B8C2A; /* Green border */
+    border-radius: 8px;
+    width: 300px;
+    margin: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.player:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.player img {
+    width: 100%; /* Full-width images */
+    height: auto;
+}
+
+.player-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.player-info h2 {
+    color: #006400; /* Dark green for player names */
+    margin: 10px 0;
+}
+
+.player-info p {
+    margin: 5px 0;
+}
+
 .btn {
-    cursor: pointer; 
-    outline: 0; 
-    color: #AAA; 
-    background: none; 
-    border: none; 
-    font-size: 18px; 
-    margin-right: 10px; 
+    background-color: #2B8C2A; /* Green buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
-/* No outline on focus */
-.btn:focus {
-    outline: none;
+
+.btn:hover {
+    background-color: #228B22; /* Darker green on hover */
 }
-/* Styles for liked/disliked state */
-.like-btn.green {
-    color: green; 
+
+.hide-button {
+    background-color: #FF4C4C; /* Red for hide button */
 }
-.dislike-btn.red {
-    color: red; 
+
+.hide-button:hover {
+    background-color: #FF0000; /* Darker red on hover */
 }
-/* Comment section styles */
+
 .comment-section {
-    margin-top: 10px; 
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #2B8C2A;
 }
+
 .comment-section input {
-    width: 80%; 
-    padding: 5px; 
-    margin-right: 5px; 
-    border: 1px solid #ddd; 
-    border-radius: 4px; 
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
-/* Comment button styles */
+
 .comment-section button {
-    padding: 5px 10px; 
-    background-color: #4CAF50; 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
+    background-color: #2B8C2A; /* Green for comment button */
+    color: white;
 }
-/* Comment button hover effect */
-.comment-section button:hover {
-    background-color: #45a049; 
+
+.comments-list {
+    margin-top: 10px;
+    max-height: 100px; /* Limit height for comments */
+    overflow-y: auto; /* Scroll if overflow */
+    background-color: #ffffff; /* White background for comments */
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
-/* Styles for comments list */
-.comments-list p {
-    margin: 5px 0; 
-    font-size: 0.9em; 
-    color: #555; 
+/* Buttons for share, feedback, and request feature */
+.share-btn, .feedback-btn, .request-feature-btn {
+    background-color: #4CAF50; /* Green color for soccer theme */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #FFFFFF; /* White border */
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 10px 15px; /* Padding for button size */
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+    font-size: 1em; /* Adjusted font size for readability */
+}
+
+.share-btn:hover, .feedback-btn:hover, .request-feature-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+/* Base button styles */
+.like-btn, .dislike-btn {
+    background-color: #ccc;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Whenthe like button is clicked, it turns green */
+.liked {
+    background-color: green;
+    color: white;
+}
+
+/* When the dislike button is clicked, it turns red */
+.disliked {
+    background-color: red;
+    color: white;
 }
